@@ -17,7 +17,7 @@
 
       <% @pantry_items.each do |pantry_item| %>
       <tr>
-        <td><%= pantry_item.food_id %></td>
+        <td><%= pantry_item.food.name %></td>
         <td><%= pantry_item.user_id %></td>
         <td><%= pantry_item.quantity %></td>
         <td>
