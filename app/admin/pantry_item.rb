@@ -1,5 +1,7 @@
 ActiveAdmin.register PantryItem do
 
+ permit_params :food_id, :user_id, :quantity
+
 # See permitted parameters documentation:
 # https://github.com/activeadmin/activeadmin/blob/master/docs/2-resource-customization.md#setting-up-strong-parameters
 #
