@@ -5,6 +5,8 @@ class Recipe < ApplicationRecord
 
   # Validations
 
+  validates :description, :presence => true
+
   validates :image, :presence => true
 
   validates :name, :presence => true
