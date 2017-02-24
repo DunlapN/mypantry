@@ -1,6 +1,9 @@
 class User < ApplicationRecord
   # Direct associations
 
+  has_many   :pantry_items,
+             :dependent => :destroy
+
   has_many   :ratings,
              :dependent => :destroy
 
