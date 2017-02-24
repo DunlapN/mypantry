@@ -6,6 +6,9 @@ class RecipesController < ApplicationController
   end
 
   def show
+    @favorite = Favorite.new
+    @ingredient = Ingredient.new
+    @rating = Rating.new
     @recipe = Recipe.find(params[:id])
 
     render("recipes/show.html.erb")

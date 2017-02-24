@@ -6,6 +6,8 @@ class FoodsController < ApplicationController
   end
 
   def show
+    @pantry_item = PantryItem.new
+    @ingredient = Ingredient.new
     @food = Food.find(params[:id])
 
     render("foods/show.html.erb")
