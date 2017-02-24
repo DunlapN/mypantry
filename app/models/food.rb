@@ -9,6 +9,10 @@ class Food < ApplicationRecord
 
   # Indirect associations
 
+  has_many   :users,
+             :through => :pantry_items,
+             :source => :user
+
   has_many   :recipes,
              :through => :ingredients,
              :source => :recipe
