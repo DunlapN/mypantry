@@ -10,7 +10,8 @@ class RatingsController < ApplicationController
   end
 
   def index
-    @ratings = Rating.page(params[:page]).per(10)
+    @q = Rating.ransack(params[:q])
+    @ratings = @q.result(:distinct => true).includes(:recipe, :user).page(params[:page]).per(10)
 
     render("ratings/index.html.erb")
   end
