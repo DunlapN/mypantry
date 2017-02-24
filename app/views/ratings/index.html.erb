@@ -18,7 +18,7 @@
       <% @ratings.each do |rating| %>
       <tr>
         <td><%= rating.recipe.name %></td>
-        <td><%= rating.user_id %></td>
+        <td><%= rating.user.created_at %></td>
         <td><%= rating.rating %></td>
         <td>
           <a href="/ratings/<%= rating.id %>" class="btn btn-primary">Show</a>
