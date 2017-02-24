@@ -12,6 +12,10 @@ class User < ApplicationRecord
 
   # Indirect associations
 
+  has_many   :rated_recipes,
+             :through => :ratings,
+             :source => :recipe
+
   has_many   :favorited_recipes,
              :through => :favorites,
              :source => :recipe

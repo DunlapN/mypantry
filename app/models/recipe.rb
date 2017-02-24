@@ -12,6 +12,10 @@ class Recipe < ApplicationRecord
 
   # Indirect associations
 
+  has_many   :users,
+             :through => :ratings,
+             :source => :user
+
   has_many   :favorite_users,
              :through => :favorites,
              :source => :user
