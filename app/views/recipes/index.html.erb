@@ -25,7 +25,7 @@
         <td><%= recipe.description %></td>
         <td><%= recipe.instructions %></td>
         <td><%= recipe.nutritional_facts %></td>
-        <td><%= recipe.image %></td>
+        <td><img src='<%= recipe.image %>' class='img-responsive'></td>
         <td>
           <a href="/recipes/<%= recipe.id %>" class="btn btn-primary">Show</a>
           <a href="/recipes/<%= recipe.id %>/edit" class="btn btn-warning">Edit</a>
