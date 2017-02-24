@@ -18,7 +18,7 @@
       <% @pantry_items.each do |pantry_item| %>
       <tr>
         <td><%= pantry_item.food.name %></td>
-        <td><%= pantry_item.user_id %></td>
+        <td><%= pantry_item.user.created_at %></td>
         <td><%= pantry_item.quantity %></td>
         <td>
           <a href="/pantry_items/<%= pantry_item.id %>" class="btn btn-primary">Show</a>
