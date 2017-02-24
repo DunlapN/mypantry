@@ -9,6 +9,10 @@ class Food < ApplicationRecord
 
   # Indirect associations
 
+  has_many   :recipes,
+             :through => :ingredients,
+             :source => :recipe
+
   # Validations
 
   validates :name, :uniqueness => true
