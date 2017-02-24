@@ -20,3 +20,189 @@
     </div>
   </div>
 </div>
+
+<!-- A User has many favorites -->
+
+<div class="row">
+  <div class="col-md-12">
+    <ul class="list-group">
+      <li class="list-group-item list-group-item-info">
+        Favorites
+      </li>
+
+      <% @user.favorites.each do |favorite| %>
+        <li class="list-group-item">
+          <a href="/favorites/<%= favorite.id %>">
+            <%= favorite.user_id %>
+          </a>
+          <div class="btn-group btn-group-xs pull-right">
+            <a href="/favorites/<%= favorite.id %>" class="btn btn-primary">
+              <i class="fa fa-search-plus"></i>
+            </a>
+            <a href="/favorites/<%= favorite.id %>/edit" class="btn btn-warning">
+              <i class="fa fa-edit"></i>
+            </a>
+            <a href="/delete_favorite/<%= favorite.id %>" class="btn btn-danger" rel="nofollow">
+              <i class="fa fa-trash-o"></i>
+            </a>
+          </div>
+        </li>
+      <% end %>
+    </ul>
+  </div>
+</div>
+
+<!-- A User has many ratings -->
+
+<div class="row">
+  <div class="col-md-12">
+    <ul class="list-group">
+      <li class="list-group-item list-group-item-info">
+        Ratings
+      </li>
+
+      <% @user.ratings.each do |rating| %>
+        <li class="list-group-item">
+          <a href="/ratings/<%= rating.id %>">
+            <%= rating.recipe_id %>
+          </a>
+          <div class="btn-group btn-group-xs pull-right">
+            <a href="/ratings/<%= rating.id %>" class="btn btn-primary">
+              <i class="fa fa-search-plus"></i>
+            </a>
+            <a href="/ratings/<%= rating.id %>/edit" class="btn btn-warning">
+              <i class="fa fa-edit"></i>
+            </a>
+            <a href="/delete_rating/<%= rating.id %>" class="btn btn-danger" rel="nofollow">
+              <i class="fa fa-trash-o"></i>
+            </a>
+          </div>
+        </li>
+      <% end %>
+    </ul>
+  </div>
+</div>
+
+<!-- A User has many pantry_items -->
+
+<div class="row">
+  <div class="col-md-12">
+    <ul class="list-group">
+      <li class="list-group-item list-group-item-info">
+        Pantry Items
+      </li>
+
+      <% @user.pantry_items.each do |pantry_item| %>
+        <li class="list-group-item">
+          <a href="/pantry_items/<%= pantry_item.id %>">
+            <%= pantry_item.food_id %>
+          </a>
+          <div class="btn-group btn-group-xs pull-right">
+            <a href="/pantry_items/<%= pantry_item.id %>" class="btn btn-primary">
+              <i class="fa fa-search-plus"></i>
+            </a>
+            <a href="/pantry_items/<%= pantry_item.id %>/edit" class="btn btn-warning">
+              <i class="fa fa-edit"></i>
+            </a>
+            <a href="/delete_pantry_item/<%= pantry_item.id %>" class="btn btn-danger" rel="nofollow">
+              <i class="fa fa-trash-o"></i>
+            </a>
+          </div>
+        </li>
+      <% end %>
+    </ul>
+  </div>
+</div>
+
+<!-- A User has many foods -->
+
+<div class="row">
+  <div class="col-md-12">
+    <ul class="list-group">
+      <li class="list-group-item list-group-item-info">
+        Foods
+      </li>
+
+      <% @user.foods.each do |food| %>
+        <li class="list-group-item">
+          <a href="/foods/<%= food.id %>">
+            <%= food.name %>
+          </a>
+          <div class="btn-group btn-group-xs pull-right">
+            <a href="/foods/<%= food.id %>" class="btn btn-primary">
+              <i class="fa fa-search-plus"></i>
+            </a>
+            <a href="/foods/<%= food.id %>/edit" class="btn btn-warning">
+              <i class="fa fa-edit"></i>
+            </a>
+            <a href="/delete_food/<%= food.id %>" class="btn btn-danger" rel="nofollow">
+              <i class="fa fa-trash-o"></i>
+            </a>
+          </div>
+        </li>
+      <% end %>
+    </ul>
+  </div>
+</div>
+
+<!-- A User has many favorited_recipes -->
+
+<div class="row">
+  <div class="col-md-12">
+    <ul class="list-group">
+      <li class="list-group-item list-group-item-info">
+        Favorited Recipes
+      </li>
+
+      <% @user.favorited_recipes.each do |recipe| %>
+        <li class="list-group-item">
+          <a href="/recipes/<%= recipe.id %>">
+            <%= recipe.name %>
+          </a>
+          <div class="btn-group btn-group-xs pull-right">
+            <a href="/recipes/<%= recipe.id %>" class="btn btn-primary">
+              <i class="fa fa-search-plus"></i>
+            </a>
+            <a href="/recipes/<%= recipe.id %>/edit" class="btn btn-warning">
+              <i class="fa fa-edit"></i>
+            </a>
+            <a href="/delete_recipe/<%= recipe.id %>" class="btn btn-danger" rel="nofollow">
+              <i class="fa fa-trash-o"></i>
+            </a>
+          </div>
+        </li>
+      <% end %>
+    </ul>
+  </div>
+</div>
+
+<!-- A User has many rated_recipes -->
+
+<div class="row">
+  <div class="col-md-12">
+    <ul class="list-group">
+      <li class="list-group-item list-group-item-info">
+        Rated Recipes
+      </li>
+
+      <% @user.rated_recipes.each do |recipe| %>
+        <li class="list-group-item">
+          <a href="/recipes/<%= recipe.id %>">
+            <%= recipe.name %>
+          </a>
+          <div class="btn-group btn-group-xs pull-right">
+            <a href="/recipes/<%= recipe.id %>" class="btn btn-primary">
+              <i class="fa fa-search-plus"></i>
+            </a>
+            <a href="/recipes/<%= recipe.id %>/edit" class="btn btn-warning">
+              <i class="fa fa-edit"></i>
+            </a>
+            <a href="/delete_recipe/<%= recipe.id %>" class="btn btn-danger" rel="nofollow">
+              <i class="fa fa-trash-o"></i>
+            </a>
+          </div>
+        </li>
+      <% end %>
+    </ul>
+  </div>
+</div>
